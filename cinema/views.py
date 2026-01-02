@@ -20,7 +20,7 @@ from cinema.serializers import (
     MovieDetailSerializer,
     MovieSessionDetailSerializer,
     MovieListSerializer,
-    OrderLIstSerializer,
+    OrderListSerializer,
     OrderCreateSerializer
 )
 
@@ -133,4 +133,4 @@ class OrderViewSet(viewsets.ModelViewSet):
     def get_serializer_class(self):
         if self.action == "create":
             return OrderCreateSerializer
-        return OrderLIstSerializer
+        return OrderListSerializer

@@ -154,12 +154,12 @@ class OrderCreateSerializer(serializers.ModelSerializer):
 
         order = Order.objects.create(user=user)
         for ticket_data in tickets_data:
-            Ticket.objects.create(order=order, **tickets_data)
+            Ticket.objects.create(order=order, **ticket_data)
 
         return order
 
 
-class OrderLIstSerializer(serializers.ModelSerializer):
+class OrderListSerializer(serializers.ModelSerializer):
     tickets = TicketOrderSerializer(many=True, read_only=True)
 
     class Meta:
