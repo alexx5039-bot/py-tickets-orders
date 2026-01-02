@@ -30,6 +30,7 @@ class GenreViewSet(viewsets.ModelViewSet):
     serializer_class = GenreSerializer
     pagination_class = None
 
+
 class ActorViewSet(viewsets.ModelViewSet):
     queryset = Actor.objects.all()
     serializer_class = ActorSerializer
@@ -40,6 +41,7 @@ class CinemaHallViewSet(viewsets.ModelViewSet):
     queryset = CinemaHall.objects.all()
     serializer_class = CinemaHallSerializer
     pagination_class = None
+
 
 class MovieViewSet(viewsets.ModelViewSet):
     queryset = Movie.objects.all()
